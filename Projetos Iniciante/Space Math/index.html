@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Space Math/index.css">
+    <title>Space Math</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script type="text/javascript">
+        let c = document.getElementById("canvas");
+        (S = Math.sin), (C = Math.cos);
+         let x = c.getContext("2d");
+        (c.width = 1920), (c.height = 1080);
+        t = 0;
+
+        function draw() {
+        requestAnimationFrame(draw);
+        let cx = 960, cy = 540; x.fillRect(0, 0, 2e3, 2e3);
+        for (i = 99; i--; ) x.clearRect(cx + (1 / (z = 3 + C((p = i + t)) * S((q = i / 31)))) * (X = S(p) * S(q)) * cx , cy + ( C(q) / z) * cx, (s = 69 / z / z), s);
+        t += 0.01; 
+        }
+        draw();
+    </script>
+</body>
+</html>
